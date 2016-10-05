@@ -13,6 +13,7 @@
 #include "cc_251x_111x.h"
 #include "cc_253x_254x.h"
 #include "cc_243x.h"
+#include "cc_85xx.h"
 #include "log.h"
 
 const uint_t DEFAULT_TIMEOUT = 3000;
@@ -59,6 +60,7 @@ CC_Programmer::CC_Programmer()
 	unit_drviers_.push_back(CC_UnitDriverPtr(new CC_253x_254x(usb_device_, pw_)));
 	unit_drviers_.push_back(CC_UnitDriverPtr(new CC_251x_111x(usb_device_, pw_)));
 	unit_drviers_.push_back(CC_UnitDriverPtr(new CC_243x(usb_device_, pw_)));
+	unit_drviers_.push_back(CC_UnitDriverPtr(new CC_85xx(usb_device_, pw_)));
 }
 
 //==============================================================================
